@@ -1,8 +1,8 @@
-import { currentUser } from '@/lib/auth'
 import LogoutButton from './logout-button'
+import useCurrentUser from '@/hooks/use-current-user'
 
-export default async function ButtonUser() {
-  const user = await currentUser()
+export default function ButtonUser() {
+  const user = useCurrentUser()
 
   return (
     <div className='flex items-center gap-4'>

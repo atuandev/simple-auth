@@ -60,7 +60,7 @@ export const {
     }
   },
   secret:
-    process.env.AUTH_SECRET || 'xnsehngnK+3HQsXpScczVxy3E6Y3GtjExLSmxntdETk+',
+    process.env.AUTH_SECRET || 'jSZ8MBE9ogfkVGtm+PlvZlyfp+MPLhNVKwVQtf1lxgG5',
   adapter: PrismaAdapter(db),
   session: { strategy: 'jwt' },
   ...authConfig
