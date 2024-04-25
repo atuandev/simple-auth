@@ -14,6 +14,11 @@ export const publicRoutes = [
   '/',
 ]
 
+export const privateRoutes = [
+  '/profile',
+  '/dashboard',
+]
+
 /**
  * An array of routes that require authentication.
  * These routes will direct logged in users to /settings.

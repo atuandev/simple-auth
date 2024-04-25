@@ -7,6 +7,7 @@ import { signIn } from '@/auth'
 import { getUserByEmail } from '@/data/user'
 import { LoginSchema } from '@/schemas'
 import { DEFAULT_LOGIN_REDIRECT } from '@/routes'
+import { revalidatePath } from 'next/cache'
 
 export const login = async (
   data: z.infer<typeof LoginSchema>,
@@ -32,6 +33,7 @@ export const login = async (
       redirectTo: DEFAULT_LOGIN_REDIRECT
     })
 
+    revalidatePath('/profile')
     return { success: 'Logged in!' }
   } catch (error) {
     if (error instanceof AuthError) {
