@@ -4,6 +4,7 @@ import { getUserById } from '@/data/user'
 import { currentUser } from '@/lib/auth'
 import { db } from '@/lib/db'
 import { ProfileSchema } from '@/schemas'
+import { revalidatePath } from 'next/cache'
 import { z } from 'zod'
 
 export const profile = async (values: z.infer<typeof ProfileSchema>) => {
@@ -28,5 +29,6 @@ export const profile = async (values: z.infer<typeof ProfileSchema>) => {
     }
   })
 
+  revalidatePath('/profile')
   return { success: 'Settings Updated!' }
 }
