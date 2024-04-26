@@ -7,7 +7,7 @@ export default async function ButtonUser() {
 
   return (
     <div className='flex items-center gap-4'>
-      <p className='max-w-[100px] py-1 px-2 text-sm font-semibold truncate bg-slate-200 rounded-sm'>
+      <p className='max-w-[120px] md:max-w-full py-1 px-2 text-sm font-semibold truncate bg-slate-200 rounded-sm'>
         {user?.name}
       </p>
       <LogoutButton>

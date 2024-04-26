@@ -8,7 +8,7 @@ export default function AuthLayout({
   return (
     <div className='h-full'>
       <Header />
-      <main className='h-full bg-neutral-200 flex items-center justify-center pt-28'>
+      <main className='h-full bg-neutral-200 flex items-center justify-center pt-28 md:pt-0'>
         {children}
       </main>
     </div>
