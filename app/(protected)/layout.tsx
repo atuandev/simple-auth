@@ -6,9 +6,9 @@ export default function AuthLayout({
   children: React.ReactNode
 }) {
   return (
-    <div className='h-full relative bg-neutral-200 '>
+    <div className='h-full'>
       <Header />
-      <main className='h-fit flex items-center justify-center pt-24 pb-10'>
+      <main className='h-full bg-neutral-200 flex items-center justify-center pt-28'>
         {children}
       </main>
     </div>

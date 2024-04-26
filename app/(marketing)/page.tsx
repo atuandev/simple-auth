@@ -1,12 +1,14 @@
-export default function Home() {
+export default function HomePage() {
   return (
-    <main className='flex h-full flex-col justify-center items-center bg-neutral-200'>
+    <div className='h-full flex flex-col justify-center items-center'>
       <div className='space-y-6 text-center'>
-        <h1 className='text-6xl font-semibold text-foreground drop-shadow-md'>
+        <h1 className='text-3xl md:text-6xl font-semibold text-foreground drop-shadow-md'>
           Home page mini project
         </h1>
-        <p className='text-foreground text-lg'>A simple authentication service</p>
+        <p className='text-foreground text-lg'>
+          A simple authentication service
+        </p>
       </div>
-    </main>
+    </div>
   )
 }

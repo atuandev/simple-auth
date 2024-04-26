@@ -7,11 +7,9 @@ export default function MarketingLayout({
   children: React.ReactNode
 }) {
   return (
-    <div className='h-full'>
+    <div className='h-screen'>
       <Navbar />
-      <main className='h-screen flex items-center justify-center bg-neutral-200'>
-        {children}
-      </main>
+      <main className='h-[calc(100%-40px)] bg-neutral-200'>{children}</main>
       <Footer />
     </div>
   )

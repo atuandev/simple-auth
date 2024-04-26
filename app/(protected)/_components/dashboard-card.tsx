@@ -6,7 +6,7 @@ import UserTable from '../_components/user-table'
 
 export default function DashboardCard() {
   return (
-    <Card className='max-w-[1200px] shadow-md'>
+    <Card className='max-w-[1200px] shadow-md overflow-x-scroll mx-4'>
       <CardHeader>
         <p className='text-xl font-semibold text-center'>Dashboard</p>
       </CardHeader>

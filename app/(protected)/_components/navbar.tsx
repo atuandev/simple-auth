@@ -8,7 +8,7 @@ export default function Navbar() {
   const pathname = usePathname()
 
   return (
-    <div className='space-x-4'>
+    <div className='md:space-x-4 flex items-center'>
       <Button asChild variant={pathname === '/dashboard' ? 'default' : 'ghost'}>
         <Link href='/dashboard'>Dashboard</Link>
       </Button>

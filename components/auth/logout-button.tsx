@@ -13,7 +13,7 @@ export default function LogoutButton({ children }: LogoutButtonProps) {
         await logout()
       }}
     >
-      <Button type='submit' variant='link'>
+      <Button type='submit' variant='link' className='p-0'>
         {children}
       </Button>
     </form>

@@ -74,7 +74,7 @@ export default function ProfileCard({ user }: ProfileCardProps) {
   }
 
   return (
-    <Card className='w-[600px]'>
+    <Card className='w-[600px] mx-4'>
       <CardHeader className='text-2xl font-semibold text-center'>
         Profile
       </CardHeader>
