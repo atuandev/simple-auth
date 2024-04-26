@@ -1,21 +1,5 @@
-import { RoleGate } from '@/components/auth/role-gate'
-import FormSuccess from '@/components/form-success'
-import { Card, CardContent, CardHeader } from '@/components/ui/card'
-import { UserRole } from '@prisma/client'
-import UserTable from '../_components/user-table'
+import DashboardCard from '../_components/dashboard-card'
 
 export default function DashboardPage() {
-  return (
-    <Card className='w-[1200px] shadow-md'>
-      <CardHeader>
-        <p className='text-xl font-semibold text-center'>Dashboard</p>
-      </CardHeader>
-      <CardContent className='space-y-4'>
-        <RoleGate allowedRoles={UserRole.ADMIN}>
-          <FormSuccess message='You are allowed to see this content!' />
-          <UserTable />
-        </RoleGate>
-      </CardContent>
-    </Card>
-  )
+  return <DashboardCard />
 }

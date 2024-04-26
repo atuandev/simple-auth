@@ -1,19 +1,21 @@
-'use client'
-
 import { logout } from '@/actions/logout'
+import { Button } from '../ui/button'
 
 interface LogoutButtonProps {
   children?: React.ReactNode
 }
 
 export default function LogoutButton({ children }: LogoutButtonProps) {
-  const onClick = async () => {
-    await logout()
-  }
-
   return (
-    <span onClick={onClick} className='cursor-pointer hover:underline'>
-      {children}
-    </span>
+    <form
+      action={async () => {
+        'use server'
+        await logout()
+      }}
+    >
+      <Button type='submit' variant='link'>
+        {children}
+      </Button>
+    </form>
   )
 }

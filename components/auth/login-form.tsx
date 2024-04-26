@@ -22,6 +22,7 @@ import { LoadingSpinner } from '../ui/loading-spinner'
 import { PasswordInput } from '../ui/password-input'
 import CardWrapper from './card-wrapper'
 import { login } from '@/actions/login'
+import { revalidatePath } from 'next/cache'
 
 export default function LoginForm() {
   const [error, setError] = useState<string | undefined>('')

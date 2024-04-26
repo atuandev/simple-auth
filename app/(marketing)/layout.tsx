@@ -1,3 +1,4 @@
+import Footer from './_components/footer'
 import Navbar from './_components/navbar'
 
 export default function MarketingLayout({
@@ -8,9 +9,10 @@ export default function MarketingLayout({
   return (
     <div className='h-full'>
       <Navbar />
-      <main className='h-full flex items-center justify-center bg-neutral-200'>
+      <main className='h-screen flex items-center justify-center bg-neutral-200'>
         {children}
       </main>
+      <Footer />
     </div>
   )
 }
